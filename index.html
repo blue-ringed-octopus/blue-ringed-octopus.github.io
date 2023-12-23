@@ -7,7 +7,7 @@
 
 <html lang="en">
 <head>
-  <title>John Doe</title>
+  <title>Blue Ringed Octopus</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -21,24 +21,28 @@
 <!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-		</div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+      </div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="#">Projects</a></li>
-				  <li><a href="#publications">Publications</a></li> 
-				  <li><a href="#">CV</a></li> 
-		  </ul>
-		</div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#publications">Publications</a></li> 
+            <li><a href="tutorials.html">Tutorials</a></li> 
+            <li><a href="recipes.html">Recipes</a></li> 
+            <li><a href="">Blog</a></li> 
+
+
+        </ul>
+      </div>
 	  </div>
 	</nav>
   
@@ -48,57 +52,109 @@
         <div class="row">
 
             <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
+            <div class="col-md-8" style="height: auto;">
                 
                 <!-- Main Image -->
-                <img class="img-responsive" src="photo.gif" alt=""><br>
                 
                 <div style="margin-top:3%; text-align:justify;">                
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing <a href="#">elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					        <p>PhD student in robotics. Interested in applying control techniques and advanced math concepts to various robotic applications. Also obsessed with cutting edge technologies in general. 
+                    My current research goal is to develope a robotic immune system to perform autonomous inspection for large confined structures.</p>
 					
-					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-					
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                  <p>Research Interest: Control and Estimation, Swarm System, Reinforcement Learning, Extended Reality</p>
                 </div>
+
+                <!-- Projects -->
+                <div class="col-md-8" >    
+                  <h2 id="projects"> Funded Projects</h2>
+                    <li><strong>Shipyard Confined Space Inspection</strong><br/>
+                      <ul>
+                        <img class="img-responsive" src="resources/neec.jpg" alt=""><br>
+
+                        lorem ipsum
+                        </ul>
+                    </li>
+
+                    <li><strong>Machine Supervisory Control</strong><br/>
+                      <ul>
+                        <img class="img-responsive" src="resources/boss.png" alt=""><br>
+
+                        lorem ipsum
+                        </ul>
+                    </li>
+
+                    <li><strong>Mechanic In-Tank Tool</strong><br/>
+                      <ul>
+                        <img class="img-responsive" src="resources/mitt.png" alt=""><br>
+
+                        lorem ipsum
+                        </ul>
+                    </li>
+          
+                
+                    <li><strong>Variable Impedence Robotic Gripper</strong><br/>
+                      <ul>
+                      <img class="img-responsive" src="resources/virg1.png" alt=""><br>
+                      Senior capstone project. A gripper that passively increases stiffness as the gripping force increase simular to human's fingers. 
+                      </ul>
+                    </li>
+                </div>
+                <!-- Projects -->
+                <div class="col-md-8" >    
+                  <h2 id=""> Personal Projects</h2>
+                    <li><strong>Wired Camera System</strong><br/>
+                      <ul>
+                      <img class="img-responsive" src="resources/" alt=""><br>
+                      </ul>
+                    </li>
+                    <li><strong>Video Stablizer</strong><br/>
+                      <ul>
+                      <img class="img-responsive" src="resources/" alt=""><br>
+                      </ul>
+                    </li>
+                    <li><strong>Self-Leveling Crawler</strong><br/>
+                      <ul>
+                      <img class="img-responsive" src="resources/" alt=""><br>
+                      </ul>
+                    </li>
+                </div>
+                <!-- Publications -->
+                <div class="col-md-8">    
+                  <h2 id="publications">Publications</h2>
+                  <ul>
+                    <li class="paper" words="add, your, keywords, here">
+                      Wong, B., Paine, T. M., Devasia, S., & Banerjee, A. G. (2023). <br>
+                      Active Anomaly Detection in Confined Spaces Using Ergodic Traversal of Directed Region Graphs. <br>
+                      <i>ArXiv.Org</i>. <br>
+                      <a href="https://doi.org/10.1016/j.robot.2022.104349">https://doi.org/10.48550/arxiv.2310.00588</a>
+                    </ul>
+                    <ul>
+                      <li class="paper" words="add, your, keywords, here">Wong, B., Marquette, W., Bykov, N., Paine, T. M., & Banerjee, A. G. (2023). <br>
+                        Human-assisted robotic detection of foreign object debris inside confined spaces of marine vessels using probabilistic mapping. <br>
+                        <i>Robotics and Autonomous Systems</i>, 161, 104349-. <br>
+                        <a href="https://doi.org/10.1016/j.robot.2022.104349">https://doi.org/10.1016/j.robot.2022.104349</a></li>
+                      </ul>
+                  </div>
             </div> 
 
             <!-- Contact Info on the Sidebar -->
             <div class="col-md-4">
+              <img class="img-responsive" src="resources/logo.png" alt=""><br>
+
                 <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Benjamin Wong</b></div><br>
                 <p><b>bycw@uw.edu</b><br>
+                <p><a href="https://www.barc.uw.edu/">BARC</a>, <a href="https://depts.washington.edu/uwsmarts/">SMARTS Lab</a> , <a href="https://faculty.washington.edu/devasia/index.html?fbclid=IwAR2mMqZrv6qkhm3QTfN1YSUqnpruAr65FlxHf1-euSaDFJplLHzykVwelOo">UPC Lab</a><br>
                 <p>Department of Mechanical Engineering<br>
                 University of Washington<br>
                 Seattle
                 </p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="#">Google Scholar</a></dd> 
-              <dd><a href="https://www.linkedin.com/in/benjamin-wong-763a30161/">LinkedIn</a></dd>
-            </div>
-            
-            
-            <!-- Publications -->
-            <div class="col-md-8" style="height: 100vh;">    
-                <h2 id="publications">Publications</h2>
-                
-                <strong>Peer-reviewed</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a> Names of the authors</li>
-                </ul>
-            
-                <strong>Technical Reports</strong><br/>
-                <ul>
-                <li class="paper" words="add, your, keywords, here"><a href="#">Full title</a>. Details of the report</li>
-                </ul>
+                <dd><a href="https://www.linkedin.com/in/benjamin-wong-763a30161/">LinkedIn</a></dd>
+                <dd><a href="https://github.com/blue-ringed-octopus">Github</a></dd>
+  
             </div>
 
             
         </div>
-
-
     </div>
     <!-- /.container -->
     
