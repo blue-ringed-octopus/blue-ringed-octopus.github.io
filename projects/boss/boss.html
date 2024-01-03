@@ -38,17 +38,17 @@
     </nav>
     
     <div style="text-align: center;">
-        <h1><b>Mechanic In-Tank Tool</b></h1>
-        MITT<br>
-        <img src="resourses/MITT_logo.png">
+        <h1><b>Machine Supervisory Control</b></h1>
+        B.O.S.S.<br>
+        <img src="resources/logo_rendered_black_text.png">
     </div>
     <hr>
     <div class="container">
         <div class="col-md-2">Author: <br>
             <b>Benjamin Wong</b> <br>
         </div>
-        <div class="col-md-2">Teammates: <br>
-          
+        <div class="col-md-6">Team Members: <br>
+            <b>Nikolay Bykov, James Guo</b>
         </div>
     </div>
  <br>
@@ -59,7 +59,12 @@
     <div class="container">
         <div class="col-md-2">
             <p><h3><b>Contents</b></h3></p><br>
-            <p><a href="#overview">Overview</a><br>
+            <p>
+                <a href="#overview">Overview</a><br>
+                <a href="#architecture">Architecture</a><br>
+                <a href="#sc">Supervisory Control</a><br>
+
+            </p>
 
 
         </div>
@@ -67,15 +72,52 @@
             <h2 id="overview">Overview</h2>
             <hr>
             <p>
+                BOSS is a SCADA system for airplane manufacturing. It is part of Boeing's effort toward dynamic NC, where the software suite is able to adapt to the dynamic environment of the manufacturing floor. 
+                The main roles of the BOSS core are: 
+                <ul>
+                    <li> High level decision making</li>
+                    <li> Monitor and enforce work schedule on work cell </li>
+                    <li> Gather information and maintain digital twin </li>
+                    <li> Process forecast </li>
+                    <li> Interfacing proprietary softwares </li>
+                    <li> GUI for universal access to all components for configuration, monitoring, and manual overwrite. </li>
+                </ul>
             </p>
-           
-            
-            <!------------------------------------------------------------------------------------>
-            <h2 id="mechanism">Lorem Ipsum</h2>
+
+            <h2 id="architecture">Architecture</h2>
             <hr>
+            <p><center><img class="img-responsive" src="resources/architecture.png" alt=""></center></p>
+            <p>
+                The BOSS core is the center of the SCADA architecture. We grouped the peripheral systems into three categories: Hardware, Computation, and Information. Modules in the hardware category is related 
+                to the low level control of the manufacturing cell. Such as PLCs, cell controller, and safety system. Computation category handles algorithms such as tasks scheduling and motion planning. Information 
+                category contains modules related to storing and retrieval of information, such as digital twin and work statement. For maintaining modularity for the peripheral system, each category has a dedicated 
+                translator. All connections toward the BOSS core are interfaced with one of the three translators.
+            </p>
+
+
+            <h2 id="sc">Supervisory Control</h2>
+            <hr>
+            <p> 
+                Due to external factors such as dull drills, material thickness deviations etc. The processing time for each machine can deviate from the global schedule, 
+                creating potential for collision due to schedule conflict. The main purpose of the supervisory controller is to avoid machine to machine collision while maintaining
+                efficiency during the manufacturing process. <br>
+                                
+                The current generation assumes the baseline schedule is optimal, and forces the machines to synchronize on the baseline by halting the machine most ahead of the schedule and signal the slowest 
+                working machine to skip to the task scheduled for the current timestamp. 
+            </p>
+            <p>
+            <center><iframe width="800" height="400" src="https://www.youtube.com/embed/VGzT34unsXM" title="physical cell overlay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+            </p>
+
+            <p> We plan to upgrade the method to a supervisory MPC, where the supervisor forecast the machine's location using the current machine location and the baseline schedule with a finite time window, and 
+                append extended waiting time at the end of each task such the overall time delay is minimized without violating the minimum machine to machine distance. In addition, if the delay is causing a significant 
+                workload imbalance, the supervisor will send the remaining task to the scheduler and initiate a reschedule.
+            </p>
+            <p><center><img class="img-responsive" src="resources/flowchart.png" alt=""></center></p>
+            <p><center><img class="img-responsive" src="resources/sketch.png" alt=""></center></p>
 
         </div>
     </div>
 </body>
-</html> <p>
+</html> 
 
