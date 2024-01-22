@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>    
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+    
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../index.html#projects">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div style="text-align: center;">
+        <h1><b>Mechanic In-Tank Tool</b></h1>
+        MITT<br>
+        <img src="resources/MITT_logo.png">
+    </div>
+    <hr>
+    <div class="container">
+        <div class="col-md-2">Author: <br>
+            <b>Benjamin Wong</b> <br>
+        </div>
+        <div class="col-md-5">Team Members: <br>
+            <b>Wade Marquette</b>, 
+            <b>Kyle Schultz</b>,
+            <b>Mohamed Safwat</b>,
+            <b>Henry Chang</b>, 
+            <b>Vamsi Jonnalagadda​​</b>, 
+            <b>Austin Ball​</b>,
+            <b>Harvey Ko​</b>,
+            <b>Lucky Singh​​</b>,
+            <b>Derek Loy​​</b>,
+            <b>Andrew McCartney</b>,
+            <b>Aaliyah Wu</b>,            
+            <b>Avocet Nagle-Christensen​</b>
+
+        </div>
+    </div>
+ <br>
+
+    </div>
+    <hr>
+
+    <div class="container">
+        <div class="col-md-2">
+            <p><h3><b>Contents</b></h3></p><br>
+            <p><a href="#overview">Overview</a><br>
+            <p><a href="#mechanism">Base Design</a><br>
+            <p><a href="#subsystem">Subsystems</a><br>
+
+                <ul>
+                    <li><a href="#cart">Control Cart</a></li>
+                    <li><a href="#rail">Modular Rail</a></li>
+                    <li><a href="#state">State Estimation</a></li>
+                    <li><a href="#whisker">Pneumatic Whisker</a></li>
+                    <li><a href="#haptic">Haptic Controller</a></li>
+                    <li><a href="#ar">Augmented Reality Interface</a></li>
+                    <li><a href="#gen2">Gen 2 Design Brainstorm</a></li>
+
+                </ul>
+            
+
+
+        </div>
+        <div class="col-md-8">
+            <h2 id="overview">Overview</h2>
+            <hr>
+            <p>
+                This project focus on designing a mechanical solution for performing confined space operation in a wing tank during manufacturing. In addition, it has to meet C1D1 explosion proof standard,
+                where all non-C1D1 electronic devices has to be outside of the tank. For this project, we decided to focus on inspection task. The prototype were build from scratch from CAD design to manufacturing. 
+                A suite of softwares were developed to work with the system; and Various mechanical upgrades were made to the prototype through out the years.   
+            </p>
+            
+            <!------------------------------------------------------------------------------------>
+            <h2 id="mechanism">Base Design</h2>
+            <hr>
+            <p>Our solution is to use a Bowden cable driven pulley system to actuate the robot arm. The arm sits on a carriage-slider system driven by pneumatic motor. The end effector of the arm is an explosion-proof camera.</p>
+            <p><center> <img src="resources/arm.png"></center></p>
+
+            <!------------------------------------------------------------------------------------>
+            <h2 id="subsystem">Subsystems</h2>
+            <hr>
+            <p> Once the prototype is finished. It was used as testbed for exploring various research direction. The followings are the subsystems I am involved in.  </p>
+            <!------------------------------------------------------------------------------------>
+            <h3 id="cart">Control Cart</h2>
+            <hr>    
+            <p>Benjamin Wong, Kyle Schultz, Wade Marquette </p>
+            <hr>            
+            <p><center> <img src="resources/cart.png"></center></p>
+
+            <p> The first prototype is controlled by an input arm where the motion is mirrored to the in-tank arm 1-to-1. The control cart is designed to house all the components required to operate the system,
+                including the input arm and the pneumatic paddle. It was later replaced with motor control system. 
+            </p>
+            <p><center> <img src="resources/pulley.png"></center></p>
+
+            <!------------------------------------------------------------------------------------>
+            <h3 id="rail">Modular Rail </h2>
+                <hr>    
+                <p>Benjamin Wong</p>
+                <hr>       
+                <p><center> <img src="resources/rail.png"></center></p>
+                <p> To make the rail easier to be assembled in the tank, we tested a design using on-off magnets to attach and detach the rails by simple turning the knob. In addition, 
+                    we added a pair of strings for the user to simply pull the rail segment toward the attachment point. No careful alignment required. </p>
+                <center><iframe width="800" height="400" src="https://www.youtube.com/embed/HjWKOWq1xAI" title="rail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                </center>
+                
+            <!------------------------------------------------------------------------------------>
+            <h3 id="state">State Estimation</h2>
+                <hr>    
+                <p>Benjamin Wong, Wade Marquette </p>
+                <hr>
+                <p> 
+                    To satisfy the C1D1 requirement, we cannot install electronic encoders directly on the arm. The control motors outside of the tank do have encoders but the motions are not one-to-one because of 
+                    the bowden cable dynamics. We devised a extended Kalman filter solution to estimate the pose of the arm in the tank. We placed two external camera the the back of the access hole, and 
+                    multiple redundant apriltags along the arm, the orientation of the tags are used to infer the joint angles of the arm, these angles are treated as observations for the Kalman filter. The motor 
+                    encoders on the outside are treated as input to the system in the Kalman filter. The state estimation is used for user situation awareness, and also collision avoidance. Using the joint states, 
+                    we calculate the closest point from the arm to the tank through ROS, if it is below the threshold, we trigger an alarm to alert the user. 
+                </p>
+                <center> <iframe width="800" height="400" src="https://www.youtube.com/embed/DVGdsfp18C0" title="collision avoidance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </center>
+            <!------------------------------------------------------------------------------------>
+            <h3 id="whisker">Pneumatic Whisker </h2>
+                <hr>    
+                <p>Benjamin Wong, Wade Marquette, Derek Loy </p>
+                <hr> 
+                <p>
+                    In addition to the software collision avoidance, we also designed a mechanical collision avoidance as a back up for software failure. Inspired by cat whiskers, we installed pneumatic whiskers
+                    that opens a valve when they are bent. The pressure drop can be measured and triggers the collision alarm. 
+                </p>
+                <center><iframe width="800" height="400" src="https://www.youtube.com/embed/saQK_iahBzw" title="whisker" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+
+            <!------------------------------------------------------------------------------------>
+            <h3 id="haptic">Haptic Controller </h2>
+                <hr>    
+                <p>Benjamin Wong, Wade Marquette, Kyle Schultz </p>
+                <hr>
+                <p> 
+                    After the system is motorized, we experimented with several input method, one of which is the haptic controller. We designed an impedance controller to work in tandem with the collision 
+                    avoidance system. The haptic device controls the velocity of the reference point. The robot is connected to the reference point via virtual spring-damper. The haptic device returns the force exerted
+                    by the virtual spring-damper on the reference point. The result is the user feels a force opposing the motion if they moved too fast or if the robot is unable to follow the reference input. We created 
+                    a ROS interface for the haptic device and tested the impedance control with the ROS turtleSim, where one turtle is the reference, and the other follows the reference.   
+                </p>    
+                <center><iframe width="800" height="400" src="https://www.youtube.com/embed/BiccBLf4Un0" title="haptic turtle" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+                <center><iframe width="800" height="400" src="https://www.youtube.com/embed/57mFySImH08" title="haptic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+            <!------------------------------------------------------------------------------------>
+            <h3 id="ar"> Augmented Reality Interface</h2>
+                <hr>    
+                <p>Benjamin Wong</p>
+                <hr>  
+                <p> 
+                    We also tested several ways to feed information to the user, one of which is augmented reality. The goal is to create a virtual x-ray visual through the tank by overlaying the digital twin
+                    on the actual tank. The Hololens app was created using Unity, and the unity app is connected to the ROS system via rosbridge, allowing realtime robot state display and video stream from the 
+                    robot camera. In addition, using the Hololens allows the user to control the arm without external controllers. We tested two methods, one by using a sliders control panel, another by directly 
+                    grabbing and moving the virtual arm. 
+                </p>
+                <center><iframe width="800" height="400" src="https://www.youtube.com/embed/VzoOVjXd03A" title="20211104 195137 HoloLens" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+                <center><iframe width="800" height="400" src="https://www.youtube.com/embed/cr8CIfWHcRQ" title="ros HoloLens" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+            <!------------------------------------------------------------------------------------>
+            <h3 id="gen2"> Gen 2 Design Brainstorm </h2>
+                <hr>    
+                <p>Benjamin Wong</p>
+                <hr>  
+                <p> 
+                    For gen 2, the explosion-proof requirement was lifted for the research to focus more on locomotion method, especially for traveling between tank bays. For this design, the 
+                    user install an extendable pole inside the tank, the robot uses a telescoping arm to grip on the pole, lift itself, and move to different bay. 
+                </p>
+                <p><center> <img src="resources/sketch1.png"></center></p>
+                <p><center> <img src="resources/sketch2.png"></center></p>
+
+        </div>
+    </body>
+</html> <p>
+
